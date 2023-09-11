@@ -12,6 +12,7 @@
     <form id="form1" runat="server">
 
         <%--DROPDOWNLIST IMAGE  --%>
+        <h2 class="m-4">Seleziona una macchina</h2>  
         <div class="d-flex justify-content-between m-4 ">
             <asp:DropDownList CssClass="btn btn-dark text-ligth mt-5 " ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="true" Height="36px">
                 <asp:ListItem Value="Dacia.png" Text="Dacia Portugal" />
@@ -42,7 +43,7 @@
         <%-- DROPDOWNLIST --%>
          <div class="d-flex justify-content-center  m-4 ">
              <h5>Anni di garanzia:</h5>
-     <asp:DropDownList CssClass="btn border-dark m-0 " ID="DropDownList2" runat="server" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" AutoPostBack="true" Height="36px">
+     <asp:DropDownList CssClass="btn border-dark m-0 " ID="DropDownList2" runat="server"  Height="36px">
          <asp:ListItem Value="1" Text="1 anno" />
          <asp:ListItem Value="2"  Text="2 anni" />
          <asp:ListItem Value="3"  Text="3 anni" />
@@ -50,15 +51,14 @@
      </asp:DropDownList>
 
 </div>
-       <asp:Button ID="Button1" CssClass="btn btn-info mx-auto" runat="server" Text="Button" OnClick="Button1_Click" />
+       <asp:Button ID="Button1" CssClass="btn btn-info d-flex justify-content-center m-4" runat="server" Text="Stampa preventivo" OnClick="Button1_Click" />
         <%-- TOTALI --%>
-        <div>
+        <div class="  border border-2 border-dark rounded-3 text-white w-75 m-4 mx-auto bg-secondary">
         <p runat="server" id="macchina"></p>
         <p runat="server" id="optional"></p>
         <p runat="server" id="garanzia"></p>
         <p runat="server" id="totale"></p>
     
-
         </div>
     </form>
 </body>

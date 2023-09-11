@@ -15,7 +15,6 @@ namespace w13_1
         {
 
         }
-
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedValue = DropDownList1.SelectedItem.Value;
@@ -35,9 +34,7 @@ namespace w13_1
                 result.InnerText = "Valore di partenza di 17000,00 €";
             
             }
-
         }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
 
@@ -55,15 +52,14 @@ namespace w13_1
                      valore = $"{CheckBoxList1.Items[i].Value} ";
                   double tot = Convert.ToDouble(valore);
                   
-                    listOptional.Add(tot);
-                    
-                   
+                    listOptional.Add(tot); 
                 }
             }
             double total = listOptional.Sum();
-                    optional.InnerText = $"Totale optional:{ total} € ";
- listTotal.Add(total);
+            optional.InnerText = $"Totale optional:{ total} € ";
+            listTotal.Add(total);
             string selectedValue = DropDownList1.SelectedItem.Value;
+
             //totale macchina
             double valoreMacchina1;
             double valoreMacchina2;
@@ -77,13 +73,13 @@ namespace w13_1
             else if (selectedValue == "fiat.png")
             {
                 valoreMacchina2 = 2000;
-                macchina.InnerText = $"Totale valore della macchina iniziale:  {valoreMacchina2} ,00 € €";
+                macchina.InnerText = $"Totale valore della macchina iniziale:  {valoreMacchina2} ,00  €";
                 listTotal.Add(valoreMacchina2);
             }
             else
             {
                 valoreMacchina3 = 17000;
-                macchina.InnerText = $"Totale valore della macchina iniziale:  {valoreMacchina3} ,00 € €";
+                macchina.InnerText = $"Totale valore della macchina iniziale:  {valoreMacchina3} ,00  €";
                 listTotal.Add(valoreMacchina3);
             }
             string selectedValue2 = DropDownList2.SelectedItem.Value;
@@ -96,7 +92,7 @@ namespace w13_1
             if (selectedValue2 == "1")
             {
                 n1 = 120;
-                garanzia.InnerText = $" Totale garanzia: {n1} €";
+                garanzia.InnerText = $" Totale garanzia: {n1},00 €";
                 listTotal.Add(n1);
             }
             else if (selectedValue2 == "2")
@@ -114,27 +110,13 @@ namespace w13_1
             }
             else
             {
-
                  n4 = 120 * 4;
                 garanzia.InnerText = $"Totale garanzia: {n4},00 €";
                 listTotal.Add(n4);
             }
-
          ;
             //Totale complessivo
-            totale.InnerText = $"Totale complessivo: {listTotal.Sum()}";
-
-
-        }
-
-        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedValue = DropDownList2.SelectedItem.Value;
-
-           
-
-        }
+            totale.InnerText = $"Totale complessivo: {listTotal.Sum()},00 € ";
+        }      
     }
-
-
 }
